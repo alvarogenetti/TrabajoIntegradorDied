@@ -1,5 +1,6 @@
 package ar.edu.utn.frsf.problemaIntegrador;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Proveedor extends Persona {
@@ -8,7 +9,10 @@ public class Proveedor extends Persona {
 
     public Proveedor(){
         super();
+        bienes= new ArrayList<>();
     }
 
-
+    public void addBien(Bien b){
+        bienes.add(b);
+    }
 }

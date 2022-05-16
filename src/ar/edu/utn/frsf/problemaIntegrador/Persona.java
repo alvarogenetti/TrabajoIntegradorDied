@@ -1,6 +1,6 @@
 package ar.edu.utn.frsf.problemaIntegrador;
 
-public abstract class Persona {
+public abstract class Persona implements CriterioBusqueda<Localidad> {
 
     protected static Integer id;
     protected String nombre;
@@ -38,5 +38,11 @@ public abstract class Persona {
 
     public void setLocalidad(Localidad localidad) {
         this.localidad = localidad;
+    }
+
+    @Override
+    public Boolean esDeLocalidad(Localidad l) {
+
+        return this.localidad.equals(l);
     }
 }

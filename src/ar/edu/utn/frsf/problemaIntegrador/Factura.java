@@ -27,12 +27,12 @@ public class Factura {
         bienes= new ArrayList<>();
     }
 
-    public Double getMontoTotal() {
-        return montoTotal;
+    public List<Bien> getBienes(){
+        return this.bienes;
     }
 
-    public void setMontoTotal(Double montoTotal) {
-        this.montoTotal = montoTotal;
+    public Double getMontoTotal() {
+        return montoTotal;
     }
 
     public void addBien(Bien bien) throws Exception {
@@ -91,7 +91,7 @@ public class Factura {
         if(this.proveedor.getLocalidad().equals(this.responsable.getLocalidad())){
                 monto= monto + monto*0.1;
         }
-        else if(this.proveedor.getLocalidad().getProvincia().equals(this.proveedor.getLocalidad().getProvincia())){
+        else if(this.proveedor.getLocalidad().getProvincia().equals(this.responsable.getLocalidad().getProvincia())){
                 monto= monto + monto*0.3;
         }
         else{
